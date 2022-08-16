@@ -4,7 +4,14 @@
 
 6, 1, 33 -> [6, 1, 33]*/
 
-int [] AnyArray = new int[8];
-for (int i = 0; i < 8; i++)
-{AnyArray[i] = new Random().Next(1, 100);}
-Console.WriteLine($"Результат: [ {String.Join(", ", AnyArray)} ]");
+int [] AnyArray(int size)
+{
+    int[] resarr = new int[size];
+    for (int i = 0; i < resarr.Length; i++)
+    {
+        resarr[i] = new Random().Next(1, 100);
+    }
+    return resarr;
+}
+int [] finarray = AnyArray(8);
+Console.WriteLine($"Результат: [ {String.Join(", ", finarray)} ]");
