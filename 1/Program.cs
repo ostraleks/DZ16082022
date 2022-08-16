@@ -4,11 +4,27 @@
 
 2, 4 -> 16*/
 
-Console.Write("Введите число А: ");
+/*Console.Write("Введите число А: ");
 int A = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число B: ");
 int B = Convert.ToInt32(Console.ReadLine());
 int result = A;
 for (int i = 1; i < B; i++)
 {result *= A;}
-Console.WriteLine($"А в степени В = {result}");
+Console.WriteLine($"А в степени В = {result}");*/
+
+int exp(int num, int deg)
+{
+    int result = num;
+    for (int i = 1; i < deg; i++)
+    {
+        result *= num;
+    }
+    return result;
+}
+Console.Write("Введите число А: ");
+int A = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число B: ");
+int B = Convert.ToInt32(Console.ReadLine());
+int res = exp(A , B);
+Console.WriteLine($"А в степени В = {res}");
