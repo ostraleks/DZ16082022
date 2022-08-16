@@ -13,7 +13,7 @@ for (int i = 1; i < B; i++)
 {result *= A;}
 Console.WriteLine($"А в степени В = {result}");*/
 
-int exp(int num, int deg)
+int Exp(int num, int deg)
 {
     int result = num;
     for (int i = 1; i < deg; i++)
@@ -26,5 +26,5 @@ Console.Write("Введите число А: ");
 int A = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число B: ");
 int B = Convert.ToInt32(Console.ReadLine());
-int res = exp(A , B);
+int res = Exp(A , B);
 Console.WriteLine($"А в степени В = {res}");
