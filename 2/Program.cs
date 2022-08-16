@@ -6,7 +6,7 @@
 
 9012 -> 12*/
 
-Console.Write("Введите число А: ");
+/*Console.Write("Введите число А: ");
 int A = Convert.ToInt32(Console.ReadLine());
 int sum = 0;
 int i = A;
@@ -16,4 +16,21 @@ i = i / 10;
 sum = sum + (A - i * 10);
 A = i;   
 }
-Console.Write($"Сумма цифр в числе А = {sum}");
+Console.Write($"Сумма цифр в числе А = {sum}");*/
+
+int SumDigit(int num)
+{
+    int sum = 0;
+    int i = num;
+    while (i > 0)
+    {
+        i = i / 10;
+        sum = sum + (num - i * 10);
+        num = i;
+    }
+    return sum;
+}
+Console.Write("Введите число А: ");
+int A = Convert.ToInt32(Console.ReadLine());
+int summa = SumDigit(A);
+Console.Write($"Сумма цифр в числе А = {summa}");
